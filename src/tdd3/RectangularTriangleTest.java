@@ -21,5 +21,7 @@ public class RectangularTriangleTest {
 	@Test
 	public void testWhenAtLeastOneParameterIsZeroOrLessThanZero() {
 		assertThrows(ArithmeticException.class, () -> RectangularTriangleChecker.canBuildRectangularTriangle(0, 2, 5));
+		assertThrows(ArithmeticException.class, () -> RectangularTriangleChecker.canBuildRectangularTriangle(2, 0, 5));
+		assertThrows(ArithmeticException.class, () -> RectangularTriangleChecker.canBuildRectangularTriangle(2, 2, 0));
 	}
 }
